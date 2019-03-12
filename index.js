@@ -12,7 +12,7 @@ const Customer = require('./models/customer');
 const addcustomer = (customer) => {
     Customer.create(customer).then(data => {
         console.info(data);
-        client.close();
+        db.close();
     });
 }
 
@@ -23,7 +23,7 @@ const findcustomer = (name) => {
     .then(data => {
         console.info(data);
         console.info(data.length);
-        client.close();
+        db.close();
     });
 }
 
